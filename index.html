@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PharmaHUB — Pharmacy Management System</title>
+    <meta name="description" content="PharmaHUB: browse medicines, order online, and manage your pharmacy — admin dashboard, stock management, and order tracking." />
+    <meta property="og:title" content="PharmaHUB — Pharmacy Management System" />
+    <meta property="og:description" content="Browse medicines, place orders, and manage your pharmacy with PharmaHUB." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Colors, radius and Cairo font (same tokens as the original) -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Tailwind v4 (browser build) — the original design used Tailwind utility classes -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:is(.dark *));
+
+      @theme inline {
+        --radius-sm: calc(var(--radius) - 4px);
+        --radius-md: calc(var(--radius) - 2px);
+        --radius-lg: var(--radius);
+        --radius-xl: calc(var(--radius) + 4px);
+        --radius-2xl: calc(var(--radius) + 8px);
+        --radius-3xl: calc(var(--radius) + 12px);
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-popover: var(--popover);
+        --color-popover-foreground: var(--popover-foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-destructive-foreground: var(--destructive-foreground);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --color-success: var(--success);
+        --color-success-foreground: var(--success-foreground);
+        --color-warning: var(--warning);
+        --color-warning-foreground: var(--warning-foreground);
+      }
+
+      @layer base {
+        * { border-color: var(--color-border); }
+        body {
+          background-color: var(--color-background);
+          color: var(--color-foreground);
+          font-family: "Cairo", system-ui, sans-serif;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/pages-public.js"></script>
+    <script src="js/pages-shop.js"></script>
+    <script src="js/pages-admin.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
